@@ -70,7 +70,7 @@ struct FClipMapMeshElement
 		int Level = 0;
 
 	UPROPERTY(Transient)
-		FVector Location;
+		FVector Location=FVector::ZeroVector;
 
 	UPROPERTY(Transient)
 		EClipMapInteriorConfig Config = EClipMapInteriorConfig::BotLeft;
@@ -127,9 +127,9 @@ struct FCollisionMeshElement
 	UPROPERTY(Transient)
 		UTextureRenderTarget2D* CollisionRT = nullptr;
 	UPROPERTY(Transient)
-		FVector Location;
+		FVector Location=FVector::ZeroVector;
 	UPROPERTY(Transient)
-		int ID;
+		int ID=0;
 	UPROPERTY(Transient)
 	TArray<FColor> HeightData;
 
@@ -143,7 +143,7 @@ struct FMeshElementOffset
 	UPROPERTY(Transient)
 		UProceduralMeshComponent* Mesh = nullptr;
 	UPROPERTY(Transient)
-		FVector Offset;
+		FVector Offset=FVector::ZeroVector;
 
 };
 
@@ -175,9 +175,9 @@ struct FSpawnableMeshElement
 		UMaterialInstanceDynamic* ComputeSpawnTransformDyn=nullptr;
 
 	UPROPERTY(Transient)
-		FVector Location;
+		FVector Location=FVector::ZeroVector;
 	UPROPERTY(Transient)
-		int ID;
+		int ID=0;
 
 	UPROPERTY(Transient)
 		TArray<FColor> LocationXData;
@@ -199,7 +199,7 @@ struct FSpawnableMeshElement
 	UPROPERTY(Transient)
 		TArray<int> InstanceOffset;
 	UPROPERTY(Transient)
-		int InstanceCount;
+		int InstanceCount=0;
 
 };
 
